@@ -6,23 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=>, initial-scale=1.0">
     <title>Document</title>
-</head>
+    <style>
+        .redsun{
+            color:rgb(88, 136, 25);
+        }
 
+        #header{
+            color:pink
+        }
+    </style>
+</head>
 <body>
 
     <header id="header">
-        <H1>뉴렉처 온라인</H1>
+    <H1><a href="list.html"><img src="../images/logo.png" alt="뉴렉처 온라인"></a></H1>
         <section>
             <h1>헤더</h1>
             <nav>
-                <h1>메인 메뉴</h1>
+                <h1 class="redsun">메인 메뉴</h1>
                 <ul>
-                    <li>학습 가이드</li>
-                    <li>강좌 선택</li>
-                    <li>AnswerIs</li>
+                    <li><a class ="redsun" href="">학습 가이드</a></li>
+                    <li><a href="">강좌 선택</a></li>
+                    <li><a href="">AnswerIs</a></li>
                 </ul>
             </nav>
-
+            
             <nav>
                 <h1>강좌검색폼</h1>
                 <form>과정 검색</form>
@@ -40,8 +48,8 @@
             <nav>
                 <h1>고객센터 메뉴</h1>
                 <ul>
-                    <li>마이페이지</li>
-                    <li>고객센터</li>
+                    <li><a href="">마이페이지</a></li>
+                    <li><a href="">고객센터</a></li>
                 </ul>
             </nav>
         </section>
@@ -52,10 +60,10 @@
         <nav>
             <h1>고객센터 메뉴</h1>
             <ul>
-                <li><a href="notice/list.html">공지사항</a></li>
-                <li>자주하는 질문</li>
-                <li>수강문의</li>
-                <li>이벤트</li>
+                <li><a href="">공지사항</a></li>
+                <li><a href="">자주하는 질문</a>/li>
+                <li><a href="">수강문의</a></li>
+                <li><a href="">이벤트</a></li>
             </ul>
         </nav>
 
@@ -177,12 +185,17 @@
                     </ul>
                     <div>다음</div>
                 </nav>
+                <div>
+                    <input type="button" value="click">
+                    <button>다음</button>
+                </div>
             </section>
         </section>
     </main>
 
+  
+        
 
-    <footer>
         회사정보
         Copyright ⓒ newlecture.com 2012-2014 All Right Reserved. Contact admin@newlecture.com for more information
     </footer>
