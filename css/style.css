@@ -1,0 +1,18 @@
+.redsun{
+    color:rgb(88, 136, 25);
+}
+
+#header{
+    color:pink
+}
+[dir='rtl']{
+    color:chocolate
+}
+
+nav li{
+    background-color: violet
+}
+
+#aa+nav+section {
+    background-color:wheat
+}
