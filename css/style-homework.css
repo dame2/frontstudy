@@ -1,18 +1,19 @@
-body{
+*{
     margin: 0;
-    font-size:12px;
+    padding: 0;
+    font-size:20px;
 }
 
 #header{
     background-color: aqua;
     height: 150px;
-    overflow: scroll;
+    overflow-x: hidden;
 }
 
 #main{
     background-color: brown;
     min-height: 500px;
-    overflow: scroll;
+    overflow-x: hidden;
 }
 
 #footer{
