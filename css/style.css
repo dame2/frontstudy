@@ -1,18 +1,33 @@
-.redsun{
-    color:rgb(88, 136, 25);
+html{
+    font-size: 10px;
 }
+}
+body{
+    margin:0;
+    font-size:1rem;
+}
+/*-----*/
 
 #header{
-    color:pink
+    height: 7rem;
+    background-color:orange;
 }
-[dir='rtl']{
-    color:chocolate
-}
-
-nav li{
-    background-color: violet
+#cute{
+    height: 2.3em;
+    background-color: aqua;
 }
 
-#aa+nav+section {
-    background-color:wheat
+#visual{
+    height: 17.1em;
+    background-color:red;
+}
+
+#body{
+    min-height: 300px;
+    background-color:green;
+}
+
+#footer{
+    height: 100px;
+    background-color:blue;
 }
