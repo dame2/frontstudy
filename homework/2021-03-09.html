@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- HTML 과제
+    구조를 flex로 바꾸어봅시다. -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Studyin</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #header {
+            background-color: whitesmoke;
+            flex-basis: 200px;
+            display: flex;
+            height: 200px;
+        }
+
+        #header .cat {
+            width: inherit;
+            background-color: red;
+            flex-grow: 1;
+            flex-shrink: 2;
+        }
+
+        #header .dog {
+            width: inherit;
+            background-color: black;
+            flex-grow: 3;
+        }
+
+        #header .rabbit {
+            width: inherit;
+            background-color: blue;
+            flex-grow: 1;
+            flex-shrink: 2;
+        }
+
+        #body {
+            min-height: 600px;
+            background-color: cornsilk;
+            display: flex;
+
+        }
+
+        #aside {
+            flex-grow:1;
+            flex-basis: 200px;
+            min-height:inherit;
+            background-color: darkolivegreen;
+        }
+
+        #main {
+            flex-grow: 3;
+            flex-basis:500px;
+            min-height:inherit;
+            background-color: darkcyan;
+        }
+
+        #footer {
+            height: 200px;
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="header">
+
+            <div class="cat">cat</div>
+            <div class="dog">dog</div>
+            <div class="rabbit">rabbit</div>
+        </div>
+    </header>
+
+    <div id="body">
+        <aside id="aside">
+                aside
+        </aside>
+        <main id="main">
+                main
+        </main>
+    </div>
+
+    <footer>
+        <div id="footer">
+            footer
+        </div>
+    </footer>
+</body>
+
+</html>

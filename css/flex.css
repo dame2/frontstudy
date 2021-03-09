@@ -1,0 +1,31 @@
+#container{
+    background-color: gray;
+    --width: 500px;
+    height: 200px;
+
+    display:flex;
+}
+#container>div{
+    flex-grow:1;
+}
+
+#container>div.box1{
+    background-color:red;
+
+}
+
+#container>div.box2{
+    background-color:orange;
+}
+
+#container>div.box3{
+    background-color:yellow;
+}
+
+#container>div.box4{
+    background-color: green;
+}
+
+#container>div.box5{
+    background-color: blue;
+}
