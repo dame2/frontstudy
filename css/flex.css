@@ -1,17 +1,25 @@
 #container{
     background-color: gray;
-    --width: 500px;
+    /* width: 200px; */
     height: 200px;
-
+    flex-flow: wrap;
     display:flex;
-}
+    align-items: center;
+    /* --높이가 안먹힘, 개별적으로 사용함 */
+    flex-wrap: wrap;
+}    
+    /* align-content:space-around; */
+    /* 여러 층일 때만 의미가 있음, 묶어서 한 단위로 봄 */
+    /* packing되다: flex-line 안에서, align-items가 아닌 aligh-content ->모아서 */
+
+
 #container>div{
-    flex-grow:1;
+    flex-basis: 100px;
 }
 
 #container>div.box1{
     background-color:red;
-
+    align-self:flex-end;
 }
 
 #container>div.box2{
@@ -24,8 +32,10 @@
 
 #container>div.box4{
     background-color: green;
+
 }
 
 #container>div.box5{
     background-color: blue;
+    
 }

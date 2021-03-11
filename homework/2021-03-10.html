@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        #big1 {
+            display: flex;
+        }
+
+        #container1 {
+            background-color: slategrey;
+            height: 200px;
+            width: 200px;
+            display: flex;
+            flex-flow: wrap;
+        }
+
+        .box1 {
+            background-color: brown;
+            align-self: flex-start;
+            width: 100px;
+            height: 100px;
+        }
+
+        #container2 {
+            background-color: slategrey;
+            height: 200px;
+            width: 200px;
+            display: flex;
+            flex-flow: wrap;
+        }
+
+        .box2 {
+            background-color: orange;
+            align-self: center;
+            width: 100px;
+            height: 100px;
+        }
+
+        #big2 {
+            display: flex;
+        }
+
+        #container3 {
+            background-color: slategrey;
+            height: 200px;
+            width: 200px;
+            display: flex;
+            flex-flow: wrap;
+        }
+
+        .box3 {
+            background-color: green;
+            align-self: flex-end;
+            width: 100px;
+            height: 100px;
+        }
+
+        #container4 {
+            background-color: slategrey;
+            height: 200px;
+            width: 200px;
+            display: flex;
+            flex-flow: wrap;
+        }
+
+        .box4 {
+            background-color: blue;
+            align-self: flex-start;
+            width: 100px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="big1">
+        <div id="container1">
+            <div class="box1">1</div>
+        </div>
+        <div id="container2">
+            <div class="box2">2</div>
+        </div>
+    </div>
+    <div id="big2">
+        <div id="container3">
+            <div class="box3">3</div>
+        </div>
+        <div id="container4">
+            <div class="box4">4</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
