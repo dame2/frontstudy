@@ -22,14 +22,7 @@ body{
 
 
 #header{
-    height: 70px;
-    width: 100vw;
-
-    position: sticky;
-    left:100px;
-    top:100px;
-    top: 0px;
-    background-color:white;
+    height: 100px;
 }
 
 
@@ -50,7 +43,7 @@ body{
     #body>.float-content{
         display: flex;
     }
-
+  
     #aside{
         flex:1;
         min-height: 100%;
@@ -59,7 +52,7 @@ body{
     main{
         flex:2;
         min-height: inherit;
-        /* overflow: scroll; */
+        overflow: scroll;
 
         background: url("../images/1.jpg") no-repeat;
     }
@@ -67,29 +60,9 @@ body{
     #quick-menu{
         background-color: aqua;
 
-        position: fixed;
-        left:100px;
-        top:100px;
-    }
-
-    #box-container{
-        width: 300px;
-        height: 300px;
-        background-color: gray;
-
-        position: relative;
-    }
-
-    .box{
         position: absolute;
-        left: 50px;
-        top: 50px;
-
-        width: 100px;
-        height: 100px;
-        background-color: aquamarine;
-
-        transition:1s;
+        left:300px;
+        top:300px;
     }
 
 #footer{
