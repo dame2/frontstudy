@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 헤더 영역을 fixed, 우측에 정사각형 sticky box -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Studyin</title>
+    <style>
+        html{
+            height:100%;
+        }
+
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        #header {
+            background-color: whitesmoke;
+            width: 100vw;
+            height: 150px;
+            position: sticky;
+            display: flex;
+        }
+
+        #header .cat {
+            background-color: rgb(255, 255, 255);
+            background: url("../images/youtube.jpg") no-repeat center;
+            background-size: contain;
+            flex-basis:300px;
+        }
+
+        #header .dog {
+            background-color: rgb(207, 28, 28);
+            flex-grow:1;
+        }
+
+        #header .rabbit {
+            background-color: rgb(163, 26, 26);
+            flex-basis:300px;
+        }
+
+        #body {
+            background-color: rgb(73, 0, 0);
+            display:flex;
+            height: 100vh;
+        }
+
+        #aside {
+            background-color: rgb(102, 50, 50);
+            flex-basis: 300px;
+        }
+
+        #main {
+            background-color: rgb(185, 110, 110);
+            flex-grow: 1;
+            display:grid;
+            grid-template-rows: repeat(auto-fill, 100px);
+            grid-template-columns: 50px 300px 100px 300px;
+        }
+        .item1{
+            background-color: beige;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        .item2{
+            background-color: bisque;
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        .item3{
+            background-color: burlywood;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+        .item4{
+            background-color: cornsilk;
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+
+
+        #footer {
+            height: 200px;
+            background-color: rgb(145, 32, 32);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="header">
+
+            <div class="cat">cat</div>
+            <div class="dog">dog</div>
+            <div class="rabbit">rabbit</div>
+        </div>
+    </header>
+
+    <div id="body">
+        <aside id="aside">
+                aside
+        </aside>
+        <main id="main">
+                
+                <div class="item1"></div>
+                <div class="item2"></div>
+                <div class="item3"></div>
+                <div class="item4"></div>
+        </main>
+    </div>
+
+    <footer>
+        <div id="footer">
+            footer
+        </div>
+    </footer>
+</body>
+
+</html>

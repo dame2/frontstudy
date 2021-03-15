@@ -1,0 +1,31 @@
+
+#container{
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 10vw);
+    grid-template-rows: 100px 100px 100px 100px;
+}
+
+#container>div.box1{
+    background-color:red;
+    /* grid-column-start: 3;
+    grid-row-start: 1;
+    grid-column-end: 5;
+    grid-row-end: 4; */
+}
+
+#container>div.box2{
+    background-color:orange;
+}
+
+#container>div.box3{
+    background-color:yellow;
+}
+
+#container>div.box4{
+    background-color: green;
+}
+
+#container>div.box5{
+    background-color: blue;
+}
