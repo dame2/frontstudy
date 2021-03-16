@@ -1,0 +1,125 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            margin:0;
+            height:100%;
+        }
+        body{
+            margin:0;
+            height:100%;
+            font-size: 40px;
+        }
+        #header {
+            display: grid;
+            grid-template-columns: 200px 5fr repeat(2, 100px);
+            grid-template-rows: repeat(auto-fill, 35px);
+            height: 180px;
+            width: 100vw;
+            border: solid 2px;
+            gap: 10px;
+            background-color: #047aed;
+        }
+
+        #logo {
+            border: solid 2px;
+            text-align:center;
+            grid-row: span 3;
+            font: 50;
+        }
+
+        .login {
+            border: solid 2px;
+            grid-column: 3/4;
+            grid-row: 1/2;
+            font-size:20px;
+        }
+
+        .sign-up {
+            border: solid 2px;
+            grid-column: 4/5;
+            grid-row: 1/2;
+            font-size:20px;
+        }
+
+        .form{
+            grid-column: 2/3;
+            grid-row: 2/3;
+            text-align:center;
+            grid-column: 2/3;
+            grid-row: 5/6;
+                    
+        }
+
+        .category{
+            grid-column: 2/3;
+            grid-row: 4/5;
+            text-align:center;
+            display:flex;
+            justify-content:space-evenly;
+        }
+
+        #body {
+            max-width: 1200px;
+            min-height: 1200px;
+            margin-left:auto;
+            margin-right:auto;
+
+            display:grid;
+            grid-template-columns: auto-fit, minimax(50px, 1fr);
+            grid-template-rows: auto-fit, minimax(50px, 1fr);
+        }
+
+        #main {
+            border: solid 1px;
+            flex-basis:900px;
+        }
+        #footer{
+            border: solid 2px;
+            height: 100px;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <div id="logo">STUDY IN</div>
+            <div class="login">login</div>
+            <div class="sign-up">sign-up</div>
+            <form class="form"><input search="searching"></form>
+            <div class="category">
+                <div>study</div>
+                <div>community</div>
+                <div>customer</div>
+            </div>
+        </div>
+        <div id="category">
+            <div class="study"></div>
+            <div class="community"></div>
+            <div class="customer"></div>
+        </div>
+    </header>
+
+    <main>
+        <div id="body">
+            <div id="main">
+                main
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer">
+            footer
+        </div>
+    </footer>
+</body>
+
+</html>
