@@ -7,6 +7,7 @@
     <title>Document</title>
     <style>
         html{
+            
             margin:0;
             height:100%;
         }
@@ -14,36 +15,38 @@
             margin:0;
             height:100%;
             font-size: 40px;
+            display: grid;
+            grid-template-columns: 150px 1fr 200px;
+            grid-template-rows: 150px 1fr 200px;
+        }
+        .header{
+            grid-column:span 4;
+            background-color: #047aed;
+            border: solid 1px;
+        }
+        .main{
+            grid-row:2/3;
+            background-color:rgb(105, 104, 102);
+            border: solid 1px;
         }
         #header {
-            display: grid;
-            grid-template-columns: 200px 5fr repeat(2, 100px);
-            grid-template-rows: repeat(auto-fill, 35px);
             height: 180px;
-            width: 100vw;
-            border: solid 2px;
-            gap: 10px;
-            background-color: #047aed;
+            display:flex;
         }
 
         #logo {
             border: solid 2px;
             text-align:center;
-            grid-row: span 3;
-            font: 50;
+            width:150px;
         }
 
         .login {
             border: solid 2px;
-            grid-column: 3/4;
-            grid-row: 1/2;
             font-size:20px;
         }
 
         .sign-up {
             border: solid 2px;
-            grid-column: 4/5;
-            grid-row: 1/2;
             font-size:20px;
         }
 
@@ -76,8 +79,6 @@
         }
 
         #main {
-            border: solid 1px;
-            flex-basis:900px;
         }
         #footer{
             border: solid 2px;
