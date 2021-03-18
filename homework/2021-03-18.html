@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html, body{
+    height:100%;
+    margin:0;
+    font-size:50px;
+}
+#root{
+    text-align: center;
+    height: 100%;
+    gap:10px;
+    display:grid;
+    grid-template-rows: 100px auto minmax(500px, auto) auto auto auto;
+    grid-template-areas:
+    "header" "aside" "main" "sidebar" "advertising" "footer";
+}
+
+.box1{
+    background-color:#428e92;
+    grid-area: header;
+}
+
+.box2{
+    background-color:cadetblue;
+    grid-area:aside;
+}
+
+.box3{
+    grid-area:main;
+    background-color: #00363a;
+}
+
+.box4{
+    grid-area:sidebar;
+    background-color:#00838f;
+}
+
+.box5{
+    grid-area:advertising;
+    background-color: #4fb3bf;
+}
+
+.box6{
+    grid-area:footer;
+    background-color: #56c8d8;
+}
+
+@media screen and (min-width: 800px) {
+#root {
+    display:grid;
+    grid-template-rows: 120px minmax(500px, auto) 1fr 1fr 90px;
+    grid-template-columns: minmax(150px, 250px) minmax(500px, auto) minmax(100px, 150px);
+    grid-template-areas:
+    "header header header"
+    "aside main sidebar"
+    "aside main sidebar"
+    "advertising main sidebar"
+    "footer footer footer";
+}
+}
+</style>
+<body>
+    <div id="root">
+        <div class="box1">header</div>
+        <div class="box2">aside</div>
+        <div class="box3">main</div>
+        <div class="box4">sidebar</div>
+        <div class="box5">advertising</div>
+        <div class="box6">footer</div>
+    </div>
+</body>
+</html>

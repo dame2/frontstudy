@@ -5,26 +5,35 @@ html, body{
 #root{
     height:100%;
     display:grid;
-    grid-template-columns: 250px 1fr;
-    grid-template-rows: 70px 1fr 100px;
+    grid-template-columns: 250px 1fr 1fr 1fr;
+    grid-template-rows: 70px 150px 1fr 100px;
+    grid-template-areas:
+    "header header header header"
+    "visual visual visual visual"
+    ". aside main ."
+    "footer footer footer footer";
 }
 
 .box1{
-    grid-area: 1 / 1 / 2 / 3;
+    grid-area: header;
     background-color:#428e92;
+}
+.visual{
+    grid-area: visual;
+    background-color: cadetblue;
 }
 
 .box2{
-    grid-area: header-end/aside-start  / main-start / footer-start;
+    grid-area: aside;
     background-color: #00363a;
 }
 
 .box3{
-    grid-area: 2/2/3/3;
+    grid-area: main;
     background-color:#00838f;
 }
 
 .box4{
-    grid-area: 3 / 1 / 4 / 3;
+    grid-area: footer;
     background-color: #4fb3bf;
 }
