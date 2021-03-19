@@ -1,0 +1,37 @@
+html, body{
+    height:100%;
+    margin:0;
+    text-align: center;
+}
+#root{
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    gap:20px;
+}
+
+#root > *{
+    background-color:red;
+    grid-column: col-start / span 12;
+}
+
+@media screen and (min-width:500px){
+#root > .side,
+#root > .ad{
+    grid-column: 1 / span 3;
+}
+
+#root>  .content,
+#root > .main-footer{
+    grid-column: col-start 4 / span 9;
+;
+}
+#root > .side,
+#root > .content{
+    grid-row : 3;  
+}
+#root > .ad,
+#root > .main-footer{
+    grid-row : 4;  
+}
+
+}

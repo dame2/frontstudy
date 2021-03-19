@@ -54,16 +54,33 @@
 @media screen and (min-width: 800px) {
 #root {
     display:grid;
-    grid-template-rows: 120px minmax(500px, auto) 1fr 1fr 90px;
+    grid-template-rows: 120px auto minmax(500px, auto) 90px;
     grid-template-columns: minmax(150px, 250px) minmax(500px, auto) minmax(100px, 150px);
     grid-template-areas:
     "header header header"
+    "sidebar sidebar sidebar"
+    "aside main main"
+    "advertising footer footer";
+}
+}
+
+@media screen and (min-width: 1200px) {
+#root {
+    display:grid;
+    grid-template-rows: 120px repeat(2, 1fr) 100px;
+    grid-template-columns: minmax(150px, 250px) minmax(300px, auto) minmax(100px, 18%);
+    grid-template-areas:
+    "header header header"
     "aside main sidebar"
-    "aside main sidebar"
-    "advertising main sidebar"
+    "aside main advertising"
     "footer footer footer";
 }
+.box5{
+    overflow:hidden;
 }
+}
+
+
 </style>
 <body>
     <div id="root">

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html, body{
+    height:100%;
+    margin:0;
+    text-align: center;
+}
+#root{
+    display: grid;
+    height:80%;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    gap:20px;
+    
+}
+
+#root > *{
+    grid-column: col-start / span 12;
+}
+
+@media screen and (min-width:500px){
+#root > .ad{
+    grid-column: 1 / span 3;
+}
+
+#root>  .content,
+#root > .main-footer{
+    grid-column: col-start 4 / span 9;
+;
+}
+#root > .main-nav,
+#root > .content{
+    grid-row : 3;  
+}
+#root > .ad,
+#root > .main-footer{
+    grid-row : 4;  
+}
+
+}
+
+.main-head{
+    background-color: #ef9a9a;
+}
+
+.main-nav{
+    background-color: #ffcccb;
+}
+
+.content{
+    background-color: #ba6b6c;
+}
+
+.side{
+    background-color: #e57373;
+}
+
+.ad{
+    background-color: #ffa4a2;
+}
+
+.main-footer{
+    background-color: #af4448;
+}
+
+</style>
+<body>
+    <div id="root">
+        <header class="main-head">The header</header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="">Nav 1</a></li>
+                <li><a href="">Nav 2</a></li>
+                <li><a href="">Nav 3</a></li>
+            </ul>
+        </nav>
+        <article class="content">
+            <h1>Main article area</h1>
+            <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a
+                two column layout, and then to a three column layout by redefining the grid, and the placement of items
+                on the grid.</p>
+        </article>
+        <aside class="side">Sidebar</aside>
+        <div class="ad">Advertising</div>
+        <footer class="main-footer">The footer</footer>
+    </div>
+</body>
+
+</html>

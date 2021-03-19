@@ -5,9 +5,11 @@ html, body{
 }
 #root{
     text-align: center;
-    gap:10px
+    gap:10px;
+    display: grid;
+    grid-template-rows: 120px auto minmax(200px, auto) 1fr 1fr 1fr;
+    grid-template-areas: "header" "aside" "main" "sidebar" "advertising" "footer";
 }
-
 .box1{
     background-color:#428e92;
     grid-area: header;
@@ -38,16 +40,29 @@ html, body{
     background-color: #56c8d8;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) and (max-width:1199px) {
 #root {
     display:grid;
-    grid-template-rows: 120px auto 1fr 1fr 1fr;
-    grid-template-columns: 250px 1fr;
+    grid-template-rows: 100px auto minmax(200px, auto) minmax(200px, auto)  1fr;
+    grid-template-columns: minmax(100px, 200px) 1fr;
     grid-template-areas:
     "header header"
-    "aside main"
-    "sidebar sidebar"
-    "advertising advertising"
+    "aside aside"
+    "sidebar main"
+    "advertising main"
     "footer footer";
 }
+}
+
+@media screen and (min-width: 1200px) {
+    #root {
+        display:grid;
+        grid-template-rows: 120px minmax(200px, auto) minmax(200px, auto) 120px;
+        grid-template-columns: 250px repeat(2, 1fr) 200px;
+        grid-template-areas:
+        "header header header header"
+        "aside main main sidebar"
+        "aside main main advertising"
+        "footer footer footer footer";
+    }
 }
