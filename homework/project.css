@@ -98,3 +98,26 @@ header .flex{
     align-items: center;
     height: 100%;
 }
+
+main{
+    display:grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap:20px;
+    height:600px;
+
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 40px;
+    justify-content: center;
+}
+
+#sidebar{
+    grid-area: 2 /1/ 7/ 2;
+    background-color: rgba(4, 120, 236, 0.5);
+}
+
+#main{
+    grid-area: 2 / 3/ 7 / 8;
+    background-color: rgba(4, 120, 236, 0.4);
+}
