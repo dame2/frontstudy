@@ -1,0 +1,83 @@
+html,body{
+    height: 100%;
+}
+
+#root{
+    display: grid;
+    /* ### 트랙을 준비하기가 가능한 방식 :  너비에 맞추어서 그리드를 그리는 것이 ###*/
+    /* 1. 고정 개수로 맞추기*/    
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%; */
+    /* grid-template-columns: 1fr auto 1fr; */
+    /* grid-template-columns: repeat(3, auto); */
+    /* grid-template-rows: 1fr 1fr; */
+    /* height: 100%; */
+
+    /* 2. 고정 크기의 고정 개수 맞추기*/
+    /* grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px;
+    height: 100%; */
+
+    /* 고정 크기 단위 : min-content / max-content / fr / px,cm,em,%, /minmax */
+    /* grid-template-columns: minmax(500px, 700px); */
+
+    /* 3. 고정 크기의 개수는 미정(너비가 허락되는 한 모든 여백을 트랙을 만드시오)*/
+    /* grid-template-columns: repeat(auto-fill, minmax(100px, auto));
+    grid-template-rows: repeat(auto-fill, 100px);
+    height: 100%; */
+
+    /* ### 트랙을 준비하지 않고 아이템에 맞추어서 배치하기 ###*/
+    /* grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    grid-template-rows: repeat(auto-fit, 100px);
+    height: 100%; */
+    /* column-gap: 10px;
+    row-gap: 10px; */
+    /* gap: 30px 10px; */
+    /* 위의 방법을 조금 간단한 버전으로  */
+    grid-template-areas: 
+    "a a b"
+    "a a b"
+    "c d d";
+    /* grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto); */
+    grid-auto-columns: 100px;
+    grid-auto-rows: 100px;
+    /* grid-auto-flow: column; */
+    height: 100%;
+
+    /* Box alignment */
+    /*1. inline(수평)축 정렬*/
+    /* justify-content: center; */
+    /* justify-items: center; */
+    
+    /*2. block(수직)축 정렬 */
+    /* align-content: center; */
+    /* align-items: flex-start; */
+    /* align-content: center; */
+}
+
+.box1{
+    background-color: #006064ed;
+    justify-self:center;
+    grid-area: a;
+}
+
+.box2{
+    background-color: #428e92;
+    justify-self:center;
+    /* align-self:center; */
+    grid-area: b;
+}
+
+.box3{
+    background-color: #003634;
+    align-self: flex-end;
+    grid-area: c;
+}
+
+.box4{
+    background-color: #00363f;
+    grid-area: d;
+    align-self: flex-end;
+}

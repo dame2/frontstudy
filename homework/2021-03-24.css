@@ -70,6 +70,7 @@ header .flex{
 
 .container {
     max-width: 1100px;
+    /* min-width:400px; */
     margin: 0 auto;
     /* overflow: auto; */
     padding: 0 40px;
@@ -109,28 +110,28 @@ header .flex{
     height: 100%;
 }
 
+/* 메인 전체 영역, 그리드 컨테이너 */
 main{
     display:grid;
-    grid-template-rows: 70px 70px minmax(auto, 1fr) 40px;
+    grid-template-rows: repeat(12, 1fr);
     gap:20px;
     min-height:100%;
     min-width:330px;
 
     margin: auto;
     padding: 0 40px;
-    /* justify-content: center; */
 
 }
-
+/* 관리자 Sidebar, grid의 아이템, mobile에서는 헤더 밑으로 */
 #category{
     border: 1px solid;
-    /* width: 100%; */
     grid-row: 2;
 }
 
+/* 관리자 Sidebar grid 내부 */
 #category>ul{
     display:flex;
-    flex-flow: row;
+    /* flex-flow: row; */
     justify-content: space-around;
     align-items: center;
     padding: 20px;
@@ -140,24 +141,30 @@ main{
     margin-inline-end: 50px;
     padding-inline-start: 40px; */
 }
+
+/* main 영역, grid의 아이템 */
 #main{
-    grid-row: 3;
+    grid-row: 3 /9;
     display:flex;
     flex-flow: column;
     justify-content: center;
 }
+
+/* main 영역 title */
 #menu-title{
     text-align: center;
     font-weight: bold;
     font-size: 25px;
     padding:5px 0px;
 }
+/* select option design  */
 select{
     height: 15px;
     width:100px;
     padding: .8em .5em;
     align-self:flex-end;
 }
+/* member 목록  */
 table.table-deco {
     border-collapse: separate;
     border-spacing: 1px;
@@ -180,6 +187,7 @@ table.table-deco {
     vertical-align: top;
     border-bottom: 1px solid #ccc;
   }
+  /* button design  */
   button {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     cursor: pointer;
@@ -194,36 +202,37 @@ table.table-deco {
   footer{
       text-align: center;
       font-size: 20px;
-      grid-row: 4;
+      grid-row: 12;
   }
 @media screen and (min-width:780px){
     main{
-        display:grid;
-        grid-template-columns: minmax(80px, 150px)1fr;
-        grid-template-rows: 70px minmax(auto, 1fr) 40px;
-        gap:20px;
-        height:600px;
-    
-        max-width: 1100px;
-        margin: auto;
+        grid-template-rows: repeat(12, 1fr);
         padding: 0 40px;
         justify-content: center;
+    }
+
+    /* 카테고리 위치 변경 */
+    #category{
+        grid-row: 2 / 11;
+        grid-column: 1/ 3;
     }
     #category>ul{
         display:flex;
         flex-flow: column;
-        align-items: stretch;
+        justify-items: space-around;
         padding: 20px;
-
+    }
+    #category.container{
+        padding:0;
     }
 
+    /* main 위치 변경 */
     #main{
-        grid-row: 2;
-        grid-column:2;
-
+        grid-row: 2 / 10;
+        grid-column: 3/ 10;
     }
     footer{
-        grid-row:3;
-        grid-column: 1 / 3;
+        grid-row: 11;
+        grid-column: 1 / 12;
     }
 }
