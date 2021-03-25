@@ -61,9 +61,8 @@ html,body{
 }   
 
 @media screen and (max-width: 960px){
-    #body{
-        grid-template-areas: "main";
-        grid-template-columns: 1fr;
+    .float-content{
+        width:100%;
     }
     #root{
         grid-template-columns: 1fr;
@@ -73,5 +72,9 @@ html,body{
         "visual"
         "body"
         "footer";
+    }
+    #body{
+        grid-template-areas: "main";
+        grid-template-columns: 1fr;
     }
 }

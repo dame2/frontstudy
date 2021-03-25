@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+/* 메인 전체 영역, 그리드 컨테이너 */
+main{
+    display:grid;
+    /* justify-content: center; */
+    grid-template-rows: 3rem repeat(5, 1fr);
+    gap:20px;
+    min-height:100%;
+    max-width: 1080px;
+    width:100%;
+
+    margin: auto;
+}
+/* 관리자 Sidebar, grid의 아이템, mobile에서는 헤더 밑으로 */
+#category{
+    border: 1px solid;
+    grid-row: 2;
+    width:100%;
+}
+
+/* 관리자 Sidebar grid 내부 */
+#category>ul{
+    list-style-type: none;
+    display:flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+/* main 영역, grid의 아이템 */
+#main{
+    grid-row: 3/7;
+    display:flex;
+    flex-flow: column;
+}
+
+/* main 영역 title */
+#menu-title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    padding:5px 0px;
+}
+/* select option design  */
+select{
+    height: 15px;
+    width:100px;
+    padding: .8em .5em;
+    align-self:flex-end;
+}
+/* member 목록  */
+table.table-deco {
+    font-size: 10px;
+    border-collapse: separate;
+    border-spacing: 1px;
+    text-align: center;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    margin: 10px 5px;
+  }
+  table.table-deco th {
+    width: 150px;
+    padding: 5px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: #efefef;
+  }
+  table.table-deco td {
+    width: 350px;
+    padding: 1px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+  }
+  /* button design  */
+  button {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: 0.5s;
+    margin:5px;
+    padding:5px 10px;
+    text-align: right;
+    float: right;
+    /* margin-right: 0px; */
+}
+@media screen and (min-width:780px){
+    main{
+        grid-template-rows: 3rem repeat(6, 1fr);
+        justify-items: center;
+        width: 100%;
+    }
+
+    /* 카테고리 위치 변경 */
+    #category{
+        grid-row: 2;
+    }
+
+    #category>ul{
+        display:flex;
+        justify-items: space-around; 
+        padding: 20px;
+    }
+
+    /* main 위치 변경 */
+    #main{
+        grid-row: 3 / 8;
+        /* justify-self: center; */
+    }
+}
+
+@media screen and (min-width:1080px){
+    main{
+        grid-template-rows: 3rem repeat(11, 1fr);
+        padding: 0 40px;
+        justify-items: center;
+        width:80%;
+    }
+
+    /* 카테고리 위치 변경 */
+    #category{
+        grid-row: 2;
+        width: 100%;
+    }
+    #category>ul{
+        display:flex;
+        padding: 20px;
+    }
+    #category.container{
+        padding:0;
+        margin: 0;
+    }
+
+    /* main 위치 변경 */
+    #main{
+        grid-row: 3 / 13;
+        justify-self: center;
+    }
+}
