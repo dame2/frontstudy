@@ -3,14 +3,32 @@ html,body{
     margin:0;
 }
 
+a{
+    color:initial;
+    text-decoration: initial;
+}
+
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------- */
+.d-none{
+    display:none;
+}
+
+
 /* --------------------------------------------------------------- */
 .float-content{
     height: 100%;
     min-height:inherit;
     opacity: 0.7;    
     /* height: inherit; */
-
 }
+
 
 #root{
     height: 100%;
@@ -27,6 +45,7 @@ html,body{
 #header{
     background-color: white;
     grid-area: header;
+ 
 }
 
 #visual{
@@ -46,12 +65,12 @@ html,body{
 }
 
 #aside{
-    background-color: blue;
+    /* background-color: blue; */
     grid-area: aside;
 }
 
 #main{
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     grid-area: main;
 }
 
@@ -75,3 +94,95 @@ html,body{
         "footer";
     }
 }
+
+/* --------------------------------------------------------------- */
+.main-menu{
+    font-family:  "맑은 고딕", "고딕", 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    font-size: 15px;
+    font-weight: bold;
+    color:#000000;
+    display:inline-block;
+}
+
+.main-menu ul{
+    display:flex;
+}
+    .main-menu>ul>li{
+    padding-left: 24px;
+    background: url('/images/bg-main-menu-vsp.png') no-repeat 12px center;
+    }
+
+    .main-menu>ul>li:first-child{
+        padding-left: 0px;
+        background: none;
+    }
+    .main-menu>ul>li>a:hover{
+        color:red;
+    }
+
+.member-menu{
+    display: inline-block;
+    font: "맑은 고딕";
+    font-size: 10px;
+    font-weight: bold;
+    color: #979797;
+    padding: 9px;
+}
+
+    .member-menu>ul{
+        display:flex;
+    }
+
+    .member-menu>ul>li{
+        padding:9px;
+        background: url('/images/bg-member-menu-sp.png') no-repeat 2px center;
+        }
+    .member-menu>ul>li:first-child{
+        padding-left: 0px;
+        background: none;
+    }
+
+.breadcrumb {
+    display: inline-block;
+}
+
+.path{
+    display:inline-block;
+    font-family:"맑은 고딕";
+    font-size:10px;
+    font-weight: bold;
+    color:#979797;
+    /*padding: 10px;*/
+}
+    .path>ol {
+        padding: 0;
+    }
+    .path>ol{
+        list-style: none;
+        display:flex;
+    }
+
+    .path>ol>li{
+        padding:0px 10px;
+        background: url('/images/icon-path.png') no-repeat -3px center;
+    }
+    .path>ol>li:first-child{
+        padding-left: 20px;
+        background: url('/images/icon-home.png') no-repeat 0px center;
+    }
+
+.pager{
+    /* display: inline-block; */
+    display:flex;
+    font-size:10px;
+    font-weight: bold;
+    color:#979797;
+}
+    .pager>ul{
+        padding:0px 5px;
+        display:flex;
+        /* padding:3px; */
+    }
+    .pager>ul>li{
+        padding:0px 3px;
+    }
