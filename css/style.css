@@ -19,8 +19,13 @@ ul{
 .d-none{
     display:none;
 }
+/* --------------------------------------------------------------- */
 
-
+.button{
+    display:inline-block;
+    text-indent:-999px;
+    overflow: hidden;
+}
 /* --------------------------------------------------------------- */
 .float-content{
     height: 100%;
@@ -30,22 +35,21 @@ ul{
 }
 
 
-#root{
+/* #root{
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 250px 750px 1fr;
-    grid-template-rows: 70px 171px 1fr 100px;
+    grid-template-rows: 500px 171px 1fr 100px;
     grid-template-areas: 
     "header header header header"
     "visual visual visual visual"
     "body body body body"
     "footer footer footer footer";
-}
+} */
 
 #header{
     background-color: white;
     grid-area: header;
- 
 }
 
 #visual{
@@ -97,6 +101,7 @@ ul{
 
 /* --------------------------------------------------------------- */
 .main-menu{
+    display:inline-block;
     font-family:  "맑은 고딕", "고딕", 'Franklin Gothic Medium', 'Arial Narrow', Arial;
     font-size: 15px;
     font-weight: bold;
@@ -185,4 +190,60 @@ ul{
     }
     .pager>ul>li{
         padding:0px 3px;
+    }
+
+.lecture-search-form{
+    display:inline-block;
+    width: 308px;
+    height: 25px;
+    border: 5px solid #8CBA34;
+}
+.lecture-search-form form{
+    height: 25px;
+ }
+    .lecture-search-form fieldset{
+        display:flex;
+        border:0;
+        padding:0;
+        margin:0;
+    }
+    .lecture-search-form fieldset label{
+        font-size:11px;
+        font-weight: bold;
+        width:55px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+    }
+
+    .lecture-search-form fieldset input[type=text]{
+        flex-grow:1;
+        border:0;
+        padding-left: 5px;
+        font-size:11px;
+        font-weight: bold;
+        color:cadetblue
+    }
+    .lecture-search-form fieldset input[type=submit]{  
+        width: 31px;
+        height: 25px;
+        border: 0px;
+        border-left: 1px solid #8CBA34;
+        background: url("../images/btn-zoom.png");
+    }
+    .customer-menu{
+        display:inline-block;
+    }
+    .customer-menu ul{
+        display:flex;
+    }
+    .customer-menu .mypage-button{
+        background: url("../images/txt-mypage.png") no-repeat;
+        width:72px;
+        height: 17px;
+    }
+    .customer-menu .customer-button{
+        background: url("../images/txt-customer.png") no-repeat;
+        width:72px;
+        height: 17px;
     }
