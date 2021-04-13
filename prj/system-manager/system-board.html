@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시판 관리 페이지</title>
+  <link href="../css/system-board.css" type="text/css" rel="stylesheet">
+  <link href="../css/common.css" type="text/css" rel="stylesheet">
+  <link href="../css/system-common.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="sub-category">
+    <ul>
+      <li><a href="">스터디</a></li>
+      <li><a href="">회원</a></li>
+      <li><a href="">카테고리</a></li>
+      <li><a href="">게시판</a></li>
+      <li><a href="">게시글</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="title">
+      <h1 class="big-title">게시판 관리</h1>
+    </section>
+    <section class="sort">
+      <h1 class="d-none">정렬순</h1>
+      <div>
+        <select class="select-box">
+          <option selected>생성순</option>
+          <option>활성화순</option>
+        </select>
+        <select class="select-box">
+          <option selected>분류</option>
+          <option>탈퇴</option>
+          <option>휴면</option>
+        </select>
+      </div>
+      <form>
+        <label>
+          <select class="select-box">
+            <option selected>이름</option>
+            <option>이름</option>
+          </select>
+        </label>
+        <input type="text" placeholder="검색">
+        <a class="btn btn-small" type="submit">검색</a>
+      </form>
+    </section>
+    <section class="main">
+      <table>
+        <thead>
+          <tr>
+            <td class="w-3">순서</td>
+            <td class="w-1">게시판</td>
+            <td class="w-2">카테고리</td>
+            <td class="w-2">게시글</td>
+            <td class="w-2">생성일<br>최근글</td>
+            <td class="w-2">상태</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>STUDY</td>
+            <td>4</td>
+            <td>32</td>
+            <td>21/03/21<br>21/04/30</td>
+            <td>삭제 대기<br>4d 23hr</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>COMMUNITY</td>
+            <td>3</td>
+            <td>54</td>
+            <td>21/03/21<br>21/04/30</td>
+            <td>비활성화</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>SERVICE</td>
+            <td>2</td>
+            <td>1</td>
+            <td>21/03/21<br>21/04/30</td>
+            <td>활성화</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <div class="last-btn">
+      <h1 class="d-none">마지막 버튼</h1>
+      <div>
+        <a class="btn btn-medium" type="submit">▲</a>
+        <a class="btn btn-medium" type="submit">▼</a>
+        <a class="btn btn-medium" type="submit">삭제</a>
+      </div>
+      <div>
+        <a class="btn btn-medium" type="submit">비활성화</a>
+        <a class="btn btn-medium" type="submit">활성화</a>
+      </div>
+  </main>
+</body>
+
+</html>

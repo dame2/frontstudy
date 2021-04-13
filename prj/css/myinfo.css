@@ -1,0 +1,89 @@
+/*----제목----*/
+.title .big-title{
+    text-align: center;
+}
+/* --------main section--------- */
+
+main{
+ margin:5px;
+}
+.main-button{
+    display:flex;
+    height:80%;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main-button li,.profile{
+    list-style: none;
+    width:300px;
+    line-height:10%;
+    border: 1px solid #DCDCDC;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+
+    margin: 2px;
+    padding: 20px;
+}
+
+
+   /* ---profile button style--- */
+   
+   .account{
+       margin-bottom:40px;
+   }
+   
+   .profile{
+       display:flex;
+   }
+   
+   .name-email{
+       display: flex;
+       flex-direction: column;
+       text-align: left;
+       padding-left:10px;
+       height:40px;
+   }
+   
+   #profile{    
+       width:40px;
+       height:40px;
+       border: 1px solid #979797;
+       color: white;
+   }
+   
+   #name{
+       flex-basis:30px;
+       line-height: 10px;
+   }
+   
+   #email{
+       flex-basis:10px;
+       color:#979797;
+       font-size:9px;
+   }
+
+   .profile .btn{
+       line-height: 20px;
+       margin-left:auto;
+   }
+   
+
+/* ----내 정보 조회---- */
+   .activity{
+       margin-top:40px;
+   }
+
+   .activity li{
+       text-align: left;
+   }
+
+
+   .last-btn{
+    width:300px;
+    display:flex;
+    justify-content: space-between;   
+}

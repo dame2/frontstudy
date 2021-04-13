@@ -1,0 +1,33 @@
+
+
+/*----제목----*/
+
+
+.title .title-id{
+    line-height: 0px;
+    font-size:3px;
+    text-align: right;
+}
+/* --------메인 구역---------- */
+
+main{
+ margin:5px;
+}
+.main-button{
+    display:flex;
+    height:80%;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.main-button>div{
+    align-self: center;
+    width:150px;
+    border: 1px solid #DCDCDC;
+    border-radius: 40px;
+    text-align: center;
+    cursor: pointer;
+
+    margin: 10px;
+    padding: 20px;
+}

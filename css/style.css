@@ -1,26 +1,95 @@
 html,body{
     height: 100%;
-    margin:0;
 }
 
+h1, body, h1, ul, ol{
+    margin:0;
+    padding:0;
+}
 a{
     color:initial;
     text-decoration: initial;
 }
 
 
-ul{
+ul, ol{
     list-style: none;
-    padding: 0;
-    margin: 0;
+}
+/* -------common style------------------------------------ */
+:root{
+    --color-basic: #979797;
+    --color-strong: #ff6a00;
+    --bg-color-basic:#fff;
+    --bg-color-light: #e9e9e9;
+    --bg-color-dark: #313131;
 }
 
-/* --------------------------------------------------------------- */
+    body{
+    font-family: "돋움", Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: var(--color-basic);
+}
+
+a{
+    color:var(--color-basic);
+}
+/* ---------utils-------------------------------------------------- */
 .d-none{
     display:none !important;
 }
-/* --------------------------------------------------------------- */
+.truncate{
+    white-space:nowrap !important;
+    overflow: hidden !important;
+    text-overflow:ellipsis !important;
+}
+.text-strong{
+    color: var(--color-strong);
+    font-weight:bold;
+}
 
+.text-align-left{
+    text-align: left !important;
+}
+/* ---------content block style--------------------------------------------- */
+.table{
+    border-collapse: collapse;
+    table-layout: fixed;
+    border-top:2px solid #8cba35;
+    width:100%;
+    text-align: center;
+}
+
+.table tr{
+    height:30px;
+    line-height: 30px;
+}
+
+.table thead tr{
+    background-color: #f5f5f5;
+}
+
+.table thead td{
+    background: url("../images/bg-title-sp.png") no-repeat 0px center;
+}
+
+table thead td:first-child{
+    background: none;
+}
+.table td{
+    border-bottom: 1px solid var(--bg-color-light);
+    padding:0;
+}
+
+.table td.w-1{
+    width:60px;
+}
+
+.table td.w-2{
+    width:100px;
+}
+
+
+/* ---------component style--------------- */
 .button,
 .icon,
 .img{
@@ -40,14 +109,14 @@ ul{
     width: 180px;
     height: 50px;
 }
-/* --------------------------------------------------------------- */
+
+/* ----------layout style--------------------------------------- */
 .float-content{
     width:960px;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
     min-height:inherit;
-    opacity: 0.7;
 }
 
 
@@ -71,11 +140,11 @@ ul{
 
 #visual{
     border-top:3px solid #8CBA34;
-    background:#313131 url("../images/bg-visual.png") no-repeat center;
+    background: var(--bg-color-dark) url("../images/bg-visual.png") no-repeat center;
     grid-area: visual;
 }
     #visual .float-content{
-        background:#313131 url("../images/customer/visual.png") no-repeat center;
+        background:var(--bg-color-dark) url("../images/customer/visual.png") no-repeat center;
     }
     
     #body{
@@ -92,7 +161,6 @@ ul{
         background: url('/images/bg-body.png') repeat-y center;
     }
     #aside{
-        /* background-color: blue; */
         grid-area: aside;
         background: url('../images/bg-aside-title.png') no-repeat;
     }
@@ -100,12 +168,13 @@ ul{
 
 
 #main{
-    /* background-color: blueviolet; */
     grid-area: main;
+    padding: 45px 0px 50px 35px;
+    display:inline-block;
 }
 
 #footer{
-    background-color: #313131;
+    background-color: #var(--bg-color-dark);
     grid-area: footer;
 }   
 
@@ -168,50 +237,75 @@ ul{
 
 
 
-.breadcrumb {
-    display: inline-block;
-}
-
 .path{
-    display:inline-block;
     font-family:"맑은 고딕";
     font-size:10px;
     font-weight: bold;
-    color:#979797;
+    color:var(--color-basic);
     /*padding: 10px;*/
 }
-    .path>ol {
-        padding: 0;
-    }
     .path>ol{
-        list-style: none;
+        padding: 0;
         display:flex;
     }
 
     .path>ol>li{
-        padding:0px 10px;
-        background: url('/images/icon-path.png') no-repeat -3px center;
+        padding-left: 10px;
+        background: url('/images/icon-path.png') no-repeat 0px center;
     }
     .path>ol>li:first-child{
         padding-left: 20px;
         background: url('/images/icon-home.png') no-repeat 0px center;
     }
 
+.page-status > div{
+    text-align: right;
+}
+
 .pager{
-    /* display: inline-block; */
+    display: flex;
+}
+
+.pager>ul{
     display:flex;
+    height:15px;
+}
+
+.pager li{
+    border: 1px solid gray;
+    flex-basis:15px;
+    width:15px;
+    line-height: 15px;
+    text-align: center;
+}
+
+.pager>:nth-child(2){
+    height:15px;
+    width:15px;
+    background: url("../images/btnPrev.png") no-repeat center;
+
+}
+
+.pager>:nth-child(4){
+    height:15px;
+    width:15px;
+    background: url("../images/btnNext.png") no-repeat center;
+
+}
+    /* display:inline-block;
     font-size:10px;
     font-weight: bold;
+    font-family:"맑은 고딕";
     color:#979797;
 }
-    .pager>ul{
+    .page-status>ul{
         padding:0px 5px;
         display:flex;
-        /* padding:3px; */
-    }
-    .pager>ul>li{
+        padding:3px;
+    
+    .page-status>ul>li{
         padding:0px 3px;
-    }
+    } */
 
 .lecture-search-form{
     position: absolute;
@@ -266,7 +360,7 @@ ul{
     font: "맑은 고딕";
     font-size: 10px;
     font-weight: bold;
-    color: #979797;
+    color: var(--color-basic);
     /* padding: 9px; */
 }   
         .member-menu>ul{
@@ -303,18 +397,45 @@ ul{
         height: 17px;
     }
 
+/* ------------------------------------------- */
 #aside>h1{
-    padding-top:26px;
     font-family: "맑은 고딕", 고딕, sans-serif;
     font-size: 24px;
     font-weight: bold;
     color:black;
+
+    margin-top: 43px;
 }
 
+.aside-menu{
+    margin-top:10px;
+}
+
+.aside-menu > h1{
+    font-family: 맑은 고딕, 고딕, sans-serif;
+    font-size:13px;
+    font-weight:bold;
+    padding-left:26px;
+    background: url("../images/icon-recommend.png") no-repeat left center;
+}
+
+
+
+/* ------------------------------------------- */
 .aside-main-menu{
-    padding-top:26px;
+    margin-top:45px;
 }
 
+    .aside-main-menu > h1{
+        color: #ffffff;
+        height: 27px;
+        line-height: 27px;
+        padding-left: 10px;
+        font-size: 12px;
+        font-weight: bold;
+        text-shadow: 0.5px 0.5px 1px #000000;
+        background: url("../images/bg-aside-sub-title.png") no-repeat 0px 0px;
+    }
     .aside-main-menu li{
         background: url("../images/bg-aside-menu-hsp.png") no-repeat center bottom;
         height: 26px;
@@ -332,7 +453,17 @@ ul{
 
     .aside-main-menu a:hover,
     .aside-main-menu a.current{
-        color:black;
         background: url("../images/icon-current.png") no-repeat  0px center;
 
     }
+
+.title{
+    font-family: "맑은 고딕";
+    font-size: 21px;
+    font-weight: bold;
+    color: #646464;
+    padding:25px;
+    background: url("../images/icon-main-title.png") no-repeat center left;
+}
+
+

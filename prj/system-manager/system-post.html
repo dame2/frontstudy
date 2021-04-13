@@ -1,0 +1,131 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시글 관리 페이지</title>
+  <link href="../css/system-post.css" type="text/css" rel="stylesheet">
+  <link href="../css/common.css" type="text/css" rel="stylesheet">
+  <link href="../css/system-common.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+  <body>
+    <nav class="sub-category">
+      <h1 class="d-none">서브 카테고리</h1>
+      <ul>
+        <li><a href="">스터디</a></li>
+        <li><a href="">회원</a></li>
+        <li><a href="">카테고리</a></li>
+        <li><a href="">게시판</a></li>
+        <li><a href="">게시글</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="title">
+        <h1 class="big-title">게시글 관리</h1>
+      </section>
+      <section class="sort">
+        <h1 class="d-none">정렬순</h1>
+        <div>
+          <select class="select-box">
+            <option selected>최근순</option>
+            <option>최근댓글순</option>
+            <option>조회수순</option>
+          </select>
+          <select class="select-box">
+            <option selected>게시판별</option>
+            <option>STUDY</option>
+            <option>COMMUNITY</option>
+            <option>SERVICE</option>
+          </select>
+        </div>
+        <form>
+          <label>
+            <select class="select-box">
+              <option selected>제목</option>
+              <option>번호</option>
+              <option>작성자</option>
+            </select>
+          </label>
+          <input type="text" placeholder="검색">
+          <a class="btn btn-small" type="submit">검색</a>
+        </form>
+      </section>
+      <section class="main">
+        <h1 class="d-none">게시글 목록</h1>
+        <table>
+          <thead>
+            <tr>
+              <td class="w-2">카테고리</td>
+              <td class="w-3">번호</td>
+              <td class="w-1">제목</td>
+              <td class="w-2">작성자</td>
+              <td class="w-2">작성일</td>
+              <td class="w-3">댓글</td>
+              <td class="w-4">조회수</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>STUDY<br>IT</td>
+              <td>1</td>
+              <td>스터디 가입하고 싶습니다</td>
+              <td>강담희</td>
+              <td>21/03/04</td>
+              <td>3</td>
+              <td>43</td>
+            </tr>
+            <tr>
+              <td>STUDY<br>IT</td>
+              <td>2</td>
+              <td>스터디 가입하고 싶습니다</td>
+              <td>강담희</td>
+              <td>21/03/04</td>
+              <td>3</td>
+              <td>43</td>
+            </tr>
+            <tr>
+              <td>STUDY<br>IT</td>
+              <td>3</td>
+              <td>스터디 가입하고 싶습니다</td>
+              <td>강담희</td>
+              <td>21/03/04</td>
+              <td>3</td>
+              <td>43</td>
+            </tr>
+            <tr>
+              <td>STUDY<br>IT</td>
+              <td>4</td>
+              <td>스터디 가입하고 싶습니다</td>
+              <td>강담희</td>
+              <td>21/03/04</td>
+              <td>3</td>
+              <td>43</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="last-btn">
+          <h1 class="d-none">테이블 밑</h1>
+          <a class="btn btn-medium" type="submit">삭제</a>
+          <nav class="pager">
+            <h1 class="d-none">페이저</h1>
+            <div>이전</div>
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+            </ul>
+            <div>다음</div>
+          </nav>
+          <a class="btn btn-medium" type="submit">리턴</a>
+        </div>
+      </section>
+    </main>
+  </body>
+
+</html>

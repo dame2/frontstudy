@@ -1,0 +1,94 @@
+ul{
+    list-style: none;
+}
+
+/*----제목----*/
+
+.title .big-title{
+    text-align: center;
+}
+
+/* -----btn-list------ */
+.btn-list{
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom:10px;
+
+    display:flex;
+
+    width: 300px;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+/* --------main section--------- */
+
+.main-button{
+    display:flex;
+    height:80%;
+    flex-flow: column;
+    align-items: center;
+}
+
+.main-button>ul{
+    width:300px;
+    height:100px;
+  
+    border: 1px solid #DCDCDC;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+
+    margin: 5px 20px;
+    padding: 10px;
+    position: relative;
+}
+.each-box a{
+    display: flex;
+}
+.messsage-content{
+    /* flex-basis: 100px; */
+    width:30px;
+    display:inline;
+}
+.messsage-content li{
+    width:30px;
+    display:inline;
+}
+
+#read{
+    color: var(--secondary);
+    /* height:30px; */
+    text-align: left;
+    align-self: center;
+    padding-right:10px;
+    font-size: 9px;
+}
+
+#sender{
+    text-align: left;
+    padding-bottom:5px;
+    font-size:10px;
+}
+
+#title{
+    text-align: left;
+    font-size:large;
+    padding-bottom:5px;
+
+}
+#preiview{
+    text-align: left;
+    font-size:12px;
+    width:230px;
+    padding-bottom:5px;
+
+}
+#date{
+    text-align: left;
+    font-size:9px;
+}
+.main-button>ul li input[type='checkbox']{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

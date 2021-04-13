@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스터디 관리 페이지</title>
+    <link href="../css/system-study.css" type="text/css" rel="stylesheet">
+    <link href="../css/common.css" type="text/css" rel="stylesheet">
+    <link href="../css/system-common.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <body>
+        <nav class="sub-category">
+          <h1 class="d-none">서브 카테고리</h1>
+          <ul>
+            <li><a href="">스터디</a></li>
+            <li><a href="">회원</a></li>
+            <li><a href="">카테고리</a></li>
+            <li><a href="">게시판</a></li>
+            <li><a href="">게시글</a></li>
+          </ul>
+        </nav>
+        <main>
+          <section class="title">
+            <h1 class="big-title">스터디 관리</h1>
+          </section>
+          <section class="sort">
+            <h1 class="d-none">정렬순</h1>
+            <div>
+              <select class="select-box">
+                <option selected>상태 분류</option>
+                <option>활성화</option>
+                <option>삭제 대기</option>
+                <option>삭제</option>
+              </select>
+              <select class="select-box">
+                <option selected>카테고리별</option>
+                <option>IT</option>
+                <option>Job</option>
+                <option>Certification</option>
+              </select>
+            </div>
+            <form>
+              <label>
+                <select class="select-box">
+                  <option selected>스터디 이름</option>
+                  <option>스터디장</option>
+                </select>
+              </label>
+              <input type="text" placeholder="검색">
+              <a class="btn btn-small" type="submit">검색</a>
+            </form>
+          </section>
+          <section class="main">
+            <h1 class="d-none">스터디 목록</h1>
+            <table>
+              <thead>
+                <tr>
+                  <td class="w-2">카테고리</td>
+                  <td class="w-1">이름</td>
+                  <td class="w-2">스터디장</td>
+                  <td class="w-4">게시글</td>
+                  <td class="w-2">생성일<br>최근글</td>
+                  <td class="w-2">상태</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>IT<br>Algorithm</td>
+                  <td>C++ 알고리즘</td>
+                  <td>강담희</td>
+                  <td>32</td>
+                  <td>21/03/21<br>21/04/30</td>
+                  <td>활성화</td>
+                </tr>
+                <tr>
+                  <td>Job</td>
+                  <td>무슨무슨 스터디</td>
+                  <td>강담희</td>
+                  <td>54</td>
+                  <td>21/03/21<br>21/04/30</td>
+                  <td>삭제 대기<br>4d 23hr</td>
+                </tr>
+                <tr>
+                  <td>Certification</td>
+                  <td>SERVICE</td>
+                  <td>강담희</td>
+                  <td>1</td>
+                  <td>21/03/21<br>21/04/30</td>
+                  <td>활성화</td>
+                </tr>
+              </tbody>
+            </table>
+       
+            <div class="last-btn">
+              <h1 class="d-none">테이블 밑</h1>
+              <a class="btn btn-medium" type="submit">삭제</a>
+              <nav class="pager">
+                <h1 class="d-none">페이저</h1>
+                <div>이전</div>
+                <ul>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                </ul>
+                <div>다음</div>
+              </nav>
+              <a class="btn btn-medium" type="submit">비활성화</a>
+            </div>
+          </section>
+        </main>
+      </body>
+</body>
+</html>
