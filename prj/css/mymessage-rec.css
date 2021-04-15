@@ -20,8 +20,32 @@ ul{
     justify-content: space-between;
     align-items:flex-end;
 }
-/* --------main section--------- */
+.message-side{
+    display:none;
+}
 
+/* -----aside----- */
+@media screen and (min-width: 650px){
+    .message-main{
+    }
+        .message-side{
+            display:initial;
+            position:absolute;
+            left:30px;
+            border: solid 1px #DCDCDC;
+            border-radius:20px;
+            width: 20%;
+            padding: 20px 0px;
+            font-size:14px;
+        }
+        .message-side a{
+                color:#646464;
+                display:flex;
+                padding: 20px;
+                justify-content: center;
+            }
+    }
+/* --------main section--------- */
 .main-button{
     display:flex;
     height:80%;

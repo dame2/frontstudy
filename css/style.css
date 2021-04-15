@@ -50,6 +50,22 @@ a{
 .text-align-left{
     text-align: left !important;
 }
+
+.text-align-left{
+
+}
+
+.mt-2{
+    margin-top:5px;
+}
+
+.mt-3{
+    margin-top: 10px;
+}
+
+.mt-4{
+    martin-top:15px;
+}
 /* ---------content block style--------------------------------------------- */
 .table{
     border-collapse: collapse;
@@ -171,10 +187,11 @@ table thead td:first-child{
     grid-area: main;
     padding: 45px 0px 50px 35px;
     display:inline-block;
+    position:relative;
 }
 
 #footer{
-    background-color: #var(--bg-color-dark);
+    background-color: var(--bg-color-dark);
     grid-area: footer;
 }   
 
@@ -237,26 +254,33 @@ table thead td:first-child{
 
 
 
-.path{
+.breadcrumb{
+    position: absolute;
+    right:0;
+    top:52px;
     font-family:"맑은 고딕";
     font-size:10px;
     font-weight: bold;
     color:var(--color-basic);
     /*padding: 10px;*/
 }
-    .path>ol{
+    .breadcrumb>ol{
         padding: 0;
         display:flex;
     }
 
-    .path>ol>li{
+    .breadcrumb>ol>li{
         padding-left: 10px;
         background: url('/images/icon-path.png') no-repeat 0px center;
     }
-    .path>ol>li:first-child{
+    .breadcrumb>ol>li:first-child{
         padding-left: 20px;
         background: url('/images/icon-home.png') no-repeat 0px center;
     }
+
+.search-form{
+    padding-top:26px;
+}
 
 .page-status > div{
     text-align: right;
@@ -264,16 +288,16 @@ table thead td:first-child{
 
 .pager{
     display: flex;
+    justify-content: center;
 }
 
 .pager>ul{
     display:flex;
     height:15px;
+    margin: 0 4px;
 }
 
 .pager li{
-    border: 1px solid gray;
-    flex-basis:15px;
     width:15px;
     line-height: 15px;
     text-align: center;
@@ -457,12 +481,12 @@ table thead td:first-child{
 
     }
 
-.title{
+.main-title{
     font-family: "맑은 고딕";
     font-size: 21px;
     font-weight: bold;
     color: #646464;
-    padding:25px;
+    padding-left:25px;
     background: url("../images/icon-main-title.png") no-repeat center left;
 }
 
