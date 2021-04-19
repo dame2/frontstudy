@@ -12,17 +12,15 @@ main{
 }
 .main-button{
     display:flex;
-    height:80%;
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    margin-top:40px;
 }
 
 
 .main-button li{
     list-style: none;
-    width:300px;
-    max-width: 500px;
     line-height:10%;
     border: 1px solid #DCDCDC;
     border-radius: 5px;
@@ -69,12 +67,9 @@ main{
     font-size:9px;
 }
 
-.account>div{
-
-}
-
-.activity{
-    
+.account, .activity{
+    min-width:250px;
+    width:55%;
 }
 
 .span{

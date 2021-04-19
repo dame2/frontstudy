@@ -1,89 +1,4 @@
-.d-none{
-    display:none !important;
-}
-.btn {
-    color: #fff;
-    background-color: var(--primary-color);
-    padding: 4px 10px;
-    cursor: pointer;
-    transition: all 0.4s;
-    font-size:0.8rem;
-    border-radius: 10px;
-}
 
-input[type="text"]{
-    height: 25px;
-    padding: 0 14px;
-    margin: 0px;
-    border: 1px solid #919191;
-    line-height: 1.5;
-    color: #333;
-    font-weight: lighter;
-    font-size: 0.6rem;
-    border-radius: 12px;
-    outline: none;
-}
-
-
-/*-------------sub nav-----------*/
-.sub-category{
-    grid-row: 1;
-    border-bottom: 1px solid #DCDCDC;
-    background-color:	#DCDCDC; 
-    height: 40px;
-    display: flex;
-}
-
-.sub-category>ul{
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    list-style: none;
-    
-    font-weight: bold;
-}
-.sub-category>ul>li{
-    cursor: pointer;
-}
-
-/*----제목----*/
-.title{
-    border-bottom: 1px solid #DCDCDC;
-    height: 55px;
-}
-
-.title .big-title{
-    font-size:20px;
-    padding: 10px 0px 0px 20px;
-}
-/* -------메인 구역--------- */
-
-/* select-box css */
-.select-box{
-    border:none;
-    /* appearance:none; */
-    font-size: 5px;
-}
-
-main{
-    margin:5px;
-   }
-
-/* 정렬순 */
-   .sort{
-    display:inline-block;
-    display:flex;
-    margin-top:10px;
-    /* overflow:hidden; */
-   }
-
-   .sort div{
-   }
-
-   .sort form{
-    margin-left: auto;
-   }
 /* 페이저 */
 .pager{
     display:flex;
@@ -109,7 +24,7 @@ main{
     }
     
     @media screen and (max-width: 359px){
-    .table th:nth-child(5), td:nth-child(5){
+    .table th:nth-child(6), td:nth-child(6){
         display:none;
     }
     

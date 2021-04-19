@@ -19,6 +19,10 @@ ul{
     width: 300px;
     justify-content: flex-end;
 }
+
+.message-side{
+    display:none;
+}
 /* -----aside----- */
 @media screen and (min-width: 650px){
     .message-main{
@@ -39,7 +43,13 @@ ul{
                 padding: 20px;
                 justify-content: center;
             }
-    }
+
+    /* .main-button>ul{
+        width:500px;
+    } */
+}
+
+
 /* --------main section--------- */
 .main-button{
     display:flex;
@@ -64,16 +74,10 @@ ul{
 .each-box a{
     display: flex;
 }
-.messsage-content{
-    /* flex-basis: 100px; */
-    width:30px;
-    display:inline;
-}
-.messsage-content li{
-    width:30px;
-    display:inline;
-}
 
+.message-content{
+    margin-left:8px;
+}
 #read{
     color: var(--secondary);
     /* height:30px; */

@@ -19,13 +19,12 @@
     .last-btn{
         display:flex;
         justify-content: space-between;
-        margin: 5px 20px;
     }
 
 
 /* -------359px 미만일 때-------- */
 @media screen and (max-width: 359px){
-    table th:nth-child(5), td:nth-child(5){
+    table th:nth-child(6), td:nth-child(6){
         display:none;
     }
     

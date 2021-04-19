@@ -11,18 +11,18 @@
 /* --------메인 구역---------- */
 
 main{
- margin:5px;
+  padding-bottom:50px  !important;
 }
 .main-button{
     display:flex;
-    height:80%;
     flex-flow: column;
     justify-content: center;
+    margin-top:40px;
 }
 
 .main-button>div{
     align-self: center;
-    width:150px;
+    width: 30%;
     border: 1px solid #DCDCDC;
     border-radius: 40px;
     text-align: center;
@@ -30,16 +30,4 @@ main{
 
     margin: 10px;
     padding: 20px;
-}
-
-@media screen (min-width: 780px){
-
-
-
-}
-
-@media screen (min-width: 1024px){
-
-
-    
 }
