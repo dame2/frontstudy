@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>스터디 관리 페이지</title>
-  <link href="../css/system-study.css" type="text/css" rel="stylesheet">
+  <title>쪽지 보내기</title>
+  <link href="../css/message-new.css" type="text/css" rel="stylesheet">
   <link href="../css/common.css" type="text/css" rel="stylesheet">
   <link href="../css/system-common.css" type="text/css" rel="stylesheet">
   <link href="../css/gb-nav.css" rel="stylesheet">
@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
     crossorigin="anonymous" />
-  <title>Document</title>
 </head>
 
 <body>
@@ -25,7 +24,7 @@
       </div>
       <div class="search-bar">
         <div class="search-wrapper">
-          <input type="text" class="large-input" name="" id="" placeholder="검색어 입력">
+          <input class="large-input" type="text" name="" id="" placeholder="검색어 입력">
           <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
         </div>
       </div>
@@ -64,108 +63,88 @@
     </div>
   </nav>
   <!-- Global top [e] -->
+  <!-- Category Side [s] -->
+  <aside>
+    <div class="category-container">
+      <div class="main-category">
+        <input type="checkbox" name="toggle" id="toggle-study" class="category-toggle">
+        <label for="toggle-study">
+          <h3><i class="fas fa-chevron-down category-icon"></i>STUDY</h3>
+        </label>
+        <div class="sub-category">
+          <ul>
+            <li><a href="#">IT</a></li>
+            <li><a href="#">JOB</a></li>
+            <li><a href="#">CERTIFICATION</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-category">
+        <input type="checkbox" name="toggle" id="toggle-community" class="category-toggle">
+        <label for="toggle-community">
+          <h3><i class="fas fa-chevron-down category-icon"></i>COMMUNITY</h3>
+        </label>
+        <div class="sub-category">
+          <ul>
+            <li><a href="#">게시판1</a></li>
+            <li><a href="#">게시판2</a></li>
+            <li><a href="#">게시판3</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-category">
+        <input type="checkbox" name="toggle" id="toggle-services" class="category-toggle">
+        <label for="toggle-services">
+          <h3><i class="fas fa-chevron-down category-icon"></i>SERVICES</h3>
+        </label>
+        <div class="sub-category">
+          <ul>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">1:1문의하기</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="category-switch"></div>
+  </aside>
+  <!-- Category Side [e] -->
   <nav class="top-category-title">
     <div class="top-category-title-wrapper">
+      <a href="mypage-profile.html">Profile</a>
       <a href="#">Study</a>
-      <a href="#">Member</a>
-      <a href="#">Category</a>
       <a href="#">Board</a>
-      <a href="#">Post</a>
+      <a href="#">Reply</a>
+      <a href="#">Inquiry</a>
+      <a href="mymessage-rec.html">Message</a>
     </div>
   </nav>
   <!-- Main [s] -->
   <main>
     <section class="title">
-      <h1 class="big-title">스터디 관리</h1>
+      <h1 class="big-title">New Message</h1>
     </section>
-    <section class="sort">
-      <h1 class="d-none">정렬순</h1>
+    <section class="btn-list">
+      <h1 class="d-none">받은 쪽지함 가기</h1>
+      <a class="btn btn-small" type="submit">받은 쪽지함</a>
       <div>
-        <select class="select-box">
-          <option selected>상태 분류</option>
-          <option>활성화</option>
-          <option>삭제 대기</option>
-          <option>삭제</option>
-        </select>
-        <select class="select-box">
-          <option selected>카테고리별</option>
-          <option>IT</option>
-          <option>Job</option>
-          <option>Certification</option>
-        </select>
+        <a class="btn btn-small" type="submit">발송</a>
       </div>
-      <form>
-        <label>
-          <select class="select-box">
-            <option selected>스터디 이름</option>
-            <option>스터디장</option>
-          </select>
-        </label>
-        <input type="text" placeholder="검색">
-        <a class="btn btn-small" type="submit">검색</a>
-      </form>
     </section>
-    <section class="main">
-      <h1 class="d-none">스터디 목록</h1>
-      <table>
-        <thead>
-          <tr>
-            <td class="w-3"><input type="checkbox"></td>
-            <td class="w-2">카테고리</td>
-            <td class="w-1">이름</td>
-            <td class="w-2">스터디장</td>
-            <td class="w-4">게시글</td>
-            <td class="w-2">생성일<br>최근글</td>
-            <td class="w-2">상태</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>IT<br>Algorithm</td>
-            <td>C++ 알고리즘</td>
-            <td>강담희</td>
-            <td>32</td>
-            <td>21/03/21<br>21/04/30</td>
-            <td>활성화</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>Job</td>
-            <td>무슨무슨 스터디</td>
-            <td>강담희</td>
-            <td>54</td>
-            <td>21/03/21<br>21/04/30</td>
-            <td>삭제 대기<br>4d 23hr</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>Certification</td>
-            <td>SERVICE</td>
-            <td>강담희</td>
-            <td>1</td>
-            <td>21/03/21<br>21/04/30</td>
-            <td>활성화</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="last-btn">
-        <h1 class="d-none">테이블 밑</h1>
-        <a class="btn btn-medium" type="submit">삭제</a>
-        <nav class="pager">
-          <h1 class="d-none">페이저</h1>
-          <div>이전</div>
-          <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-          </ul>
-          <div>다음</div>
-        </nav>
-        <a class="btn btn-medium" type="submit">비활성화</a>
+    <section class="message-main">
+      <!--aside---->
+      <nav class="message-side">
+        <a href="mymessage-rec.html">받은 쪽지함</a>
+        <a href="mymessage-sent.html">보낸 쪽지함</a>
+        <a href="message-new.html">새 쪽지</a>
+      </nav>
+      <div class="main">
+        <section class="mess-box">
+          <h1 class="d-none">쪽지 상제정보</h1>
+          <input class="sender" type="text" placeholder="받는 사람">
+          <input class="title" type="text" placeholder="제목을 입력하세요">
+          <textarea class="detail" type="text" placeholder="내용을 입력하세요"></textarea>
+        </section>
       </div>
     </section>
   </main>
@@ -177,7 +156,7 @@
   </footer>
   <!-- Global bottom[s] -->
   <nav class="gb-bottom-nav">
-    <a href="#" class="bottom-nav-btn">
+    <a href="#" class="bottom-nav-btn" id="category-bottom-button">
       <i class="fas fa-bars"></i>
       <span>카테고리</span>
     </a>
@@ -200,5 +179,4 @@
   </nav>
   <!-- Global bottom[s] -->
 </body>
-
 </html>

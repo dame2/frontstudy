@@ -9,6 +9,7 @@
 
 main{
  margin:5px;
+
 }
 .main-button{
     display:flex;
@@ -19,18 +20,24 @@ main{
 }
 
 
-.main-button li{
-    list-style: none;
+.main-button a{
+    display:block;
     line-height:10%;
     border: 1px solid #DCDCDC;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
-
+    transition: all 0.4s;
+    
     margin: 10px;
     padding: 20px;
 }
 
+.main-button a:hover{
+    opacity: 0.7;
+    background-color: var(--primary-color);
+    color: white;
+}
 /* ---button style--- */
 
 .account{
@@ -74,4 +81,5 @@ main{
 
 .span{
     font-weight: bold;
+    text
 }

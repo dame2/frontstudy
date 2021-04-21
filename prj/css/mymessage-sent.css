@@ -17,9 +17,9 @@ ul{
     display:flex;
 
     width: 300px;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items:flex-end;
 }
-
 .message-side{
     display:none;
 }
@@ -44,11 +44,16 @@ ul{
                 justify-content: center;
             }
 
-    /* .main-button>ul{
-        width:500px;
-    } */
+        .message-side a:hover{
+            color: var(--primary-color);
+        }
+    .btn-list div:nth-child(2){
+        display:none;
+    }
+    .btn-list{
+        justify-content:flex-end;
+    }
 }
-
 
 /* --------main section--------- */
 .main-button{
@@ -71,47 +76,50 @@ ul{
     padding: 10px;
     position: relative;
 }
+.message-wrapper{
+    transition: all 0.4s;
+}
+.message-wrapper:hover{
+    background-color:var(--gray-color);
+}
 .each-box a{
     display: flex;
 }
-
-.message-content{
+.messsage-content{
     margin-left:8px;
 }
-#read{
+
+.read{
     color: var(--secondary);
     /* height:30px; */
     text-align: left;
     align-self: center;
     padding-right:10px;
-    font-size: 9px;
+    color:var(--secondary-color);
+    font-weight:900;
+    font-size: 10px;
 }
 
-#sender{
+.sender{
     text-align: left;
     padding-bottom:5px;
     font-size:10px;
 }
 
-#title{
+.mes-title{
     text-align: left;
     font-size:large;
     padding-bottom:5px;
-
 }
-#preiview{
+
+.preview{
     text-align: left;
     font-size:12px;
     width:230px;
     padding-bottom:5px;
-
 }
-#date{
+
+.date{
     text-align: left;
     font-size:9px;
-}
-.main-button>ul li input[type='checkbox']{
-    position: absolute;
-    top: 10px;
-    right: 10px;
 }

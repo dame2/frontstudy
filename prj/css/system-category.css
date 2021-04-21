@@ -1,23 +1,8 @@
 
 /* -------메인 구역--------- */
+::-webkit-scrollbar { display: none; }
 
 /* 페이저 */
-.pager{
-    display:flex;
-    justify-content: center;
-    font-size:10px;
-    font-weight: bold;
-    color:#979797;
-    padding:10px;
-}
-    .pager>ul{
-        padding:0px 5px;
-        display:flex;
-    }
-    .pager>ul>li{
-        list-style: none;
-        padding:0px 3px;
-    }
 
 .last-btn{
     display:flex;
@@ -32,11 +17,11 @@
 .box{
     border:1px solid #979797;
     border-radius: 15px;
-    padding:5px;
+    padding:10px;
     margin: 5px;
 }
 
-.box ul{
+.box div{
     display:flex;
     overflow:scroll;
     list-style: none;
@@ -44,35 +29,44 @@
     flex-wrap:wrap;
 }
 
-.box li{
+.box label:hover{
+    opacity:0.7;
+}
+.box label{
     border: none;
-    border-radius: 15px;
-    padding: 3px 8px;
+    border-radius: 13px;
+    padding: 7px 13px;
     margin:3px;
     color: #fff;
 }
 
-.upper li{
-    background-color: var(--primary-color);
-    padding: 7px 12px;
+.lower{
+    display:none;
 }
 
-.lower li{
+.upper label{
+    background-color: var(--primary-color);
+    padding: 10px 15px;
+}
+
+.lower label{
     background-color: var(--secondary-color);
 }
 
-input[type=checkbox] {
+input[type=checkbox], input[type=radio] {
     display: none;
 }
 
-input[type=checkbox] + label{
+.box input[type=checkbox] + label, input[type=radio]{
     cursor: pointer;
 }
 
-input[type=checkbox]:checked + label:before{
-    content: "\2713";
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);  
+input[type=checkbox]:checked+label:before, input[type=radio]:checked+label:before{
+    content: "\2713"; 
+}
+
+.box input[type=checkbox]:checked+label{
     font-weight: bolder; 
-    color: var(--primary-color);
     text-align: center;
+    background-color: rgb(20, 148, 20);
 }

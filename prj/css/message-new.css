@@ -26,8 +26,6 @@ ul{
 
 /* -----aside----- */
 @media screen and (min-width: 650px){
-    .message-main{
-    }
         .message-side{
             display:initial;
             position:absolute;

@@ -44,11 +44,22 @@ ul{
                 padding: 20px;
                 justify-content: center;
             }
+
+        .message-side a:hover{
+            color: var(--primary-color);
+        }
+    .btn-list div:nth-child(2){
+        display:none;
     }
+    .btn-list{
+        justify-content:flex-end;
+    }
+}
 /* --------main section--------- */
 .main-button{
     display:flex;
-    height:80%;
+    height:100%;
+    margin-bottom:0px;
     flex-flow: column;
     align-items: center;
 }
@@ -66,51 +77,46 @@ ul{
     padding: 10px;
     position: relative;
 }
+.message-wrapper{
+    transition: all 0.4s;
+}
+.message-wrapper:hover{
+    background-color:var(--gray-color);
+}
 .each-box a{
     display: flex;
 }
-.messsage-content{
-    /* flex-basis: 100px; */
-    width:30px;
-    display:inline;
-}
-.messsage-content li{
-    width:30px;
-    display:inline;
-}
 
-.message-content{
-    margin-left:8px;
-}
-
-#read{
+.read{
     color: var(--secondary);
     /* height:30px; */
     text-align: left;
     align-self: center;
     padding-right:10px;
+    color:var(--secondary-color);
+    font-weight:900;
 }
 
-#sender{
+.sender{
     text-align: left;
     padding-bottom:5px;
     font-size:10px;
 }
 
-#title{
+.mes-title{
     text-align: left;
     font-size:large;
     padding-bottom:5px;
 }
 
-#preiview{
+.preview{
     text-align: left;
     font-size:12px;
     width:230px;
     padding-bottom:5px;
 }
 
-#date{
+.date{
     text-align: left;
     font-size:9px;
 }
