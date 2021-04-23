@@ -1,3 +1,15 @@
+// --ex7--
+window.onload = addEventListener("load", function(){
+    var section = window.document.querySelector("#ex7");
+
+    var item = section.querySelectorAll(".item");
+    var content = section.querySelectorAll(".item>div:nth-child(2)");
+
+    item.onclick = function(e){
+        e.classList.toggle("d-none");
+    }
+
+
 // --ex6---
 window.onload = addEventListener("load", function(){
     var section = window.document.querySelector("#ex6");
@@ -9,15 +21,36 @@ window.onload = addEventListener("load", function(){
 
     var selected = null;
 
-    // div들을 얻어온다
-    var boxes = container.querySelectorAll(".box");
-    // 0번째가 클릭되면 selected에 대입한다
-    for(let i=0; i<boxes.length; i++){
-            boxes[i].onclick = function(){
-            selected = boxes[i];
-            console.log(selected);
-        }
+    container.onclick = function(e){
+        //박스 선택했을 때만 반응해라
+        if(!e.target.classList.contains("box"))
+            return;
+
+        //이전 상태를 지우기 위한 조건문
+        if(selected != null && selected != e.target)
+            selected.classList.remove("selected");
+
+        //선택된 놈을 select에 담아라
+        selected = e.target;
+        
+        //알아서 넣다 뺐다 하렴
+        selected.classList.toggle("selected");
+
+            
+        
+
+        // selected.onclick = function(twice){
+        //     twice.classList.remove("selected");
+        // }
     }
+
+    // var boxes = container.querySelectorAll(".box");
+    // for(let i=0; i<boxes.length; i++){
+    //         boxes[i].onclick = function(){
+    //         selected = boxes[i];
+    //         console.log(selected);
+    //     }
+    // }
     
     del.onclick = function(){
         if(selected != null)

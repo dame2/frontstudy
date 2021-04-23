@@ -10,6 +10,37 @@
 </head>
 
 <body>
+    <section id="ex7">
+        <style>
+            .d-none{
+                display: none;
+            }
+            #ex7 .item>div:first-child{
+                border:1px solid #e9e9e9;
+                padding: 5px 10px;
+                font-weight:bold;
+            }
+            #ex7 .item>div:last-child{
+                min-height: 100px;
+            }
+        </style>
+        <h1>7. 아코디언 : 노드 순회하기 </h1>
+        <div class="accordion">
+            <div class="item">
+                <div>title1</div>
+                <div class="">content1</div>
+            </div>
+            <div class="item">
+                <div>title2</div>
+                <div class="d-none">content2</div>
+            </div>
+            <div class="item">
+                <div>title3</div>
+                <div class="d-none">content3</div>
+            </div>
+        </div>
+    </section>
+    <hr>
     <section id="ex6">
         <style>
             #ex6 .container{
@@ -31,8 +62,11 @@
                 left:0;
                 top:0;
             }
+            #ex6 .box.selected{
+                border: 1px solid white;
+            }
         </style>
-        <h1>6. 이벤트 객체 target 속성</h1>
+        <h1>6. 이벤트 버블링과 Event.target 속성</h1>
         <h2>앞의 예제에서 삭제를 한다?<br>
             "선택한 원"을 삭제하시오? "선택한 원"을 바꾸시오?
         </h2>
