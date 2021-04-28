@@ -1,13 +1,103 @@
+// --ex9--
+window.onload = addEventListener("load", function(){
+    var section = window.document.querySelector("#ex9");
+    
+    var uploadBox = section.querySelector(".upload-box")
+    var selButton = section.querySelector(".btn-sel");
+    var fileButton = section.querySelector(".btn-file")
+    
+    uploadBox.ondragenter = function(e){
+        console.log("enter")
+    }
+
+    uploadBox.ondragover = function(e){
+        e.preventDefault();
+        
+        var valid = e.dataTransfer.types.indexOf("Files") >=0;
+        console.log(valid);
+
+        if(!valid)
+            uploadBox.style.backgroundColor = "red";
+        else
+            uploadBox.style.backgroundColor = "green";
+       
+    }
+
+    uploadBox.ondragleave = function(e){
+        uploadBox.style.backgroundColor = "initial";
+    }
+
+    uploadBox.ondrop = function(e){
+        uploadBox.style.backgroundColor = "white";
+        e.preventDefault();
+
+        console.log(e.dataTransfer.files[0].text);
+    }
+    
+    fileButton.oninput = function(e){
+        for(var k in fileButton.files[0])
+         console.log(k);
+
+        console.log(fileButton.files[0]);
+    };
+
+    selButton.onclick = function(e){
+        var event = new MouseEvent("click",{
+            'view': window,
+            'bubbles': true,
+            'cancelable': true
+        });
+
+        fileButton.dispatchEvent(event);
+    }
+});
+
+// --ex8--
+window.onload = addEventListener("load", function(){
+    var section = window.document.querySelector("#ex8");
+
+    var product = section.querySelector(".product");
+
+    var up = section.querySelector(".up");
+    var down = section.querySelector(".down");
+    var current = section.querySelector(".current");
+
+    product.onclick = function(e){
+        var target = e.target;
+        if(!target.classList.contains("up")&&
+          !target.classList.contains("down")&&
+          !target.classList.contains("current"))
+            return;
+
+        if(target.classList.contains("up")){
+            var input = target.parentElement.querySelector("input");
+            input.value = parseInt(input.value)+1;
+        }
+        else if(target.classList.contains("down")){
+            var input = target.parentElement.querySelector("input");
+            input.value = parseInt(input.value)-1;
+        }
+        else if(target.classList.contains("current")){
+            target.parentElement.classList.toggle("dotted");
+        }
+    }
+});
+
 // --ex7--
 window.onload = addEventListener("load", function(){
     var section = window.document.querySelector("#ex7");
 
-    var item = section.querySelectorAll(".item");
-    var content = section.querySelectorAll(".item>div:nth-child(2)");
+    var accordion = section.querySelector(".accordion");
+    
+    accordion.onclick = function(e){
+        // 1. .title이 아니면 return
+        // if(!e.target.classList.contains("title"))
+        //     return;
 
-    item.onclick = function(e){
-        e.classList.toggle("d-none");
+        // 2. target의 동생의 d-none을 빼다
+        e.target.nextElementSibling.classList.toggle("d-none");
     }
+});
 
 
 // --ex6---

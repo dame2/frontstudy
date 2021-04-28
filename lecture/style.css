@@ -64,7 +64,7 @@ a{
 }
 
 .mt-4{
-    martin-top:15px;
+    margin-top:15px;
 }
 
 /* ---------component style--------------- */
@@ -91,7 +91,6 @@ a{
 #header{
     display:flex;
     height: 50px;
-    background: yellow;
 
     padding: 0px 10px;
     align-items: center;
@@ -101,4 +100,8 @@ a{
 }
 #header .header-menu ul{
     display: flex;
+}
+
+aside{
+    background-color:white;
 }
