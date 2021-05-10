@@ -1,3 +1,17 @@
+// --ex10--
+window.onload = addEventListener("load", function(){
+    var section = document.querySelector("#ex10");
+    
+    var requestBtn = section.querySelector(".btn-request");
+    requestBtn.onclick = function(e){
+        var request = new XMLHttpRequest();
+        request.open("GET", "http://localhost:8080/api/notice/list", false);
+        request.send(null);
+
+        console.log(request.responseText);
+    }
+});
+
 // --ex9--
 window.onload = addEventListener("load", function(){
     var section = window.document.querySelector("#ex9");
